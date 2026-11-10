@@ -4,21 +4,30 @@
 <style>body{font:16px/1.55 system-ui,sans-serif;max-width:720px;margin:32px auto;padding:0 16px;color:#17202a}h1{font-size:24px}h2{font-size:18px;margin-top:28px}</style></head>
 <body>
 <h1>CheapVPN: privacy policy</h1>
-<p>Effective November 6, 2026.</p>
+<p>Effective November 10, 2026 (CheapVPN 1.3.0 and later; adds built-in servers).</p>
 <h2>What the developer collects</h2>
-<p>Nothing. CheapVPN has no analytics, no telemetry and no proxy servers of its own, and the developer does not receive your browsing activity or your settings.</p>
+<p>CheapVPN has no analytics or telemetry. If you use your own servers, the developer receives nothing. If you use CheapVPN's built-in servers, the developer keeps only what is listed under "Built-in CheapVPN servers" below: never the sites you visit or the content of your traffic.</p>
+<h2>Built-in CheapVPN servers</h2>
+<p>When you connect through a built-in CheapVPN server, your browser traffic passes through servers run for CheapVPN on Fly.io in the location you choose. Websites see that server's IP address instead of yours.</p>
+<ul>
+<li><strong>What is kept:</strong> a random install ID created by the extension (not linked to your name or email); the number of bytes your install used this month, to apply plan limits; and, for new free accounts, a one-way salted hash of your network address, kept for 2 days, to limit how many free accounts one network can create. If you subscribe to Unlimited, the server asks ExtensionPay whether your subscription is active and, if so, uses a hash of your subscription email so one subscription shares one data allowance across your browsers.</li>
+<li><strong>What is never kept or logged:</strong> the websites, addresses or URLs you visit, the content of your traffic, your IP address, or your browsing history.</li>
+<li><strong>Encryption:</strong> HTTPS sites stay encrypted end to end and the servers cannot read them. Plain-HTTP sites pass through unencrypted, as on any network.</li>
+<li><strong>Acceptable use:</strong> do not use built-in servers for spam, attacks or anything illegal. Mail ports are blocked, and abusive accounts may be cut off.</li>
+</ul>
 <h2>What is stored in your browser</h2>
 <p>Your server addresses, optional proxy usernames and passwords, bypass list, site rules and health-check results are saved in your browser's local extension storage so the extension remembers them. They are not encrypted by CheapVPN and are not sent to the developer. Uninstalling the extension deletes them.</p>
-<h2>Your proxy server</h2>
+<h2>Your own proxy server</h2>
 <p>When CheapVPN is on, your browser traffic goes to the proxy server you configured. That server's operator can see your traffic in the same way your normal internet provider could, so only use servers you trust. Your proxy username and password are sent only to the proxy that asks for them.</p>
 <h2>Network use by the extension</h2>
 <ul>
 <li><strong>ExtensionPay (extensionpay.com):</strong> checks whether you have purchased Pro, using a random ID created on install. ExtensionPay's library keeps that ID and your purchase status in your browser's extension storage, which your browser may sync if you have Chrome sync turned on.</li>
+<li><strong>CheapVPN account service (cheapvpn-api.fly.dev):</strong> about every 30 minutes, and when you open the extension, it sends your random install ID (and, if you have one, ExtensionPay's ID for your install) to get your plan, data used, available locations and a short-lived access token for the built-in servers.</li>
 <li><strong>Check my IP:</strong> contacts api.ipify.org only when you click the button, to show your public IP address.</li>
 <li><strong>Pro "Test all":</strong> contacts speed.cloudflare.com through each of your servers only when you click the button, to measure latency, speed and exit location. The results are stored only in your browser.</li>
 </ul>
 <h2>Payments</h2>
-<p>The optional Pro upgrade is processed by ExtensionPay and Stripe. They receive your email address and payment details under their own privacy policies. The developer never sees your card number.</p>
+<p>The optional Pro upgrade and the Unlimited subscription are processed by ExtensionPay and Stripe. They receive your email address and payment details under their own privacy policies. The developer never sees your card number.</p>
 <h2>Selling or sharing data</h2>
 <p>No data is sold, shared with third parties for advertising or analytics, or used for credit or lending decisions.</p>
 <h2>Contact</h2>
